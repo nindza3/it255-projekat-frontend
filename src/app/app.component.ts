@@ -15,7 +15,13 @@ export class AppComponent {
 
   initializeApp() {
     if (localStorage.getItem('user_id') != undefined || null) {
-      this.router.navigate(['/home']);
+      if (localStorage.getItem('user_role') != undefined || null) {
+        if (localStorage.getItem('user_role') == 'admin') {
+          this.router.navigate(['/admin-dashboard']);
+        } else {
+          this.router.navigate(['client-dashboard']);
+        }
+      }
     } else {
       this.router.navigate(['/login']);
     }

@@ -33,8 +33,12 @@ export class LoginComponent implements OnInit {
         next: (data) => {
           console.log(data);
           if (data.role.roleName == 'client') {
+            localStorage.setItem('user_id', data.id);
+            localStorage.setItem('user_role', data.role.roleName);
             this.goToClientDashboard();
           } else {
+            localStorage.setItem('user_id', data.id);
+            localStorage.setItem('user_role', data.role.roleName);
             this.goToAdminDashboard();
           }
         },
@@ -50,12 +54,10 @@ export class LoginComponent implements OnInit {
   }
 
   goToClientDashboard() {
-    this.router.navigate(['home']);
-    console.log('posalji na client dashboard');
+    this.router.navigate(['client-dashboard']);
   }
 
   goToAdminDashboard() {
-    // this.router.navigate()
-    console.log('posalji na admin dashboard');
+    this.router.navigate(['admin-dashboard']);
   }
 }
