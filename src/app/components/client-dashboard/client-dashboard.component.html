@@ -1,1 +1,22 @@
-<p>client-dashboard works!</p>
+<table class="pure-table pure-table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>IMDB Rating</th>
+      <th>Year</th>
+      <th>Add to watched</th>
+      <th>Add to favourites</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.id }}</td>
+      <td>{{ movie.name }}</td>
+      <td>{{ movie.imdbRating }}</td>
+      <td>{{ movie.year }}</td>
+      <td><button>Dodaj</button></td>
+      <td><button>Dodaj</button></td>
+    </tr>
+  </tbody>
+</table>

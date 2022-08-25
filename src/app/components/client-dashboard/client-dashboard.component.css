@@ -1,1 +1,7 @@
-
+td {
+  color: brown;
+  background-color: white;
+}
+table {
+  margin: auto;
+}
