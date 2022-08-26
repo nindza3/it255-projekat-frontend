@@ -1,0 +1,13 @@
+td {
+  color: brown;
+  background-color: white;
+}
+table {
+  margin: auto;
+}
+.btns {
+  margin: auto;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}

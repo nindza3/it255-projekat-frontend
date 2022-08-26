@@ -1,1 +1,25 @@
-<p>admin-dashboard works!</p>
+<br />
+<br />
+<table class="pure-table pure-table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>IMDB Rating</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.id }}</td>
+      <td>{{ movie.name }}</td>
+      <td>{{ movie.imdbRating }}</td>
+      <td>{{ movie.year }}</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<br />
+<div class="btns">
+  <button>Dodaj film</button>
+</div>

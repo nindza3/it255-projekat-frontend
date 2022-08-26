@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ClientDashboardComponent } from './components/client-dashboard/client-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AddmovieComponent } from './components/addmovie/addmovie.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
     RegisterComponent,
     ClientDashboardComponent,
     AdminDashboardComponent,
+    AddmovieComponent,
   ],
   imports: [
     BrowserModule,
