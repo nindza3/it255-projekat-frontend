@@ -17,8 +17,74 @@
       <td>{{ movie.name }}</td>
       <td>{{ movie.imdbRating }}</td>
       <td>{{ movie.year }}</td>
-      <td><button>Dodaj</button></td>
-      <td><button>Dodaj</button></td>
+      <td><button (click)="addMovieToWatched(movie.id)">Dodaj</button></td>
+      <td><button (click)="addMovieToFavourite(movie.id)">Dodaj</button></td>
     </tr>
   </tbody>
+</table>
+<br /><br />
+<table class="pure-table pure-table-striped">
+  <thead>
+    <tr>
+      <td colspan="5">
+        <h4 style="text-align: center">User favourite movies:</h4>
+      </td>
+    </tr>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>ImdbRating</th>
+      <th>Year</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let favouriteMovie of favouriteMovies">
+      <td>{{ favouriteMovie.id }}</td>
+      <td>{{ favouriteMovie.name }}</td>
+      <td>{{ favouriteMovie.imdbRating }}</td>
+      <td>{{ favouriteMovie.year }}</td>
+      <td>
+        <button (click)="removeMovieFromFavourite(favouriteMovie.id)">
+          Remove
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br /><br />
+<table class="pure-table pure-table-striped">
+  <thead>
+    <tr>
+      <td colspan="5">
+        <h4 style="text-align: center">User watched movies:</h4>
+      </td>
+    </tr>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>ImdbRating</th>
+      <th>Year</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let watchedMovie of watchedMovies">
+      <td>{{ watchedMovie.id }}</td>
+      <td>{{ watchedMovie.name }}</td>
+      <td>{{ watchedMovie.imdbRating }}</td>
+      <td>{{ watchedMovie.year }}</td>
+      <td>
+        <button (click)="removeMovieFromWatched(watchedMovie.id)">
+          Remove
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br /><br />
+<table class="pure-table pure-table-striped">
+  <tr>
+    <td><button class="btn" (click)="logout()">Logout</button></td>
+  </tr>
 </table>

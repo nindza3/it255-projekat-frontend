@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'client-dashboard', component: ClientDashboardComponent },
   { path: 'admin-dashboard', component: AdminDashboardComponent },
-  { path: 'add-movie', component: AddmovieComponent },
+  { path: 'add-movies', component: AddmovieComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 

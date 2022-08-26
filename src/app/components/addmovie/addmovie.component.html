@@ -1,1 +1,35 @@
-<p>addmovie works!</p>
+<div class="wrapper">
+  <form [formGroup]="addmovie" class="form">
+    <h3 id="headline">Dodaj novi film :</h3>
+    <br />
+    <label>Ime filma: </label>
+    <input
+      type="text"
+      placeholder="Ime filma"
+      class="inp"
+      formControlName="name"
+    />
+
+    <br />
+    <label>IMDB rating: </label>
+    <input
+      type="text"
+      placeholder="IMDB rating"
+      class="inp"
+      formControlName="imdbRating"
+    />
+    <br />
+    <label>Godina objavljivanja: </label>
+    <input
+      type="number"
+      placeholder="Godina"
+      class="inp"
+      formControlName="year"
+    />
+    <br />
+    <div class="btns">
+      <br />
+      <button (click)="movieSubmit(addmovie.value)">Dodaj</button>
+    </div>
+  </form>
+</div>
